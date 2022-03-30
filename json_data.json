@@ -1,1 +1,10 @@
-{"cscdcds": [{"username": "", "passw": ""}]}
+{
+  "a": {
+    "nameconfig": "a",
+    "numberaccount": "2",
+    "data": {
+      "username": ["a", "a", "a", "a", "a", "a", "a", "a"],
+      "passw": ["a", "a", "a", "a", "a", "a", "a", "a"]
+    }
+  }
+}
