@@ -6,8 +6,8 @@ from tkinter.ttk import *
 from tkinter import messagebox
 
 # Import of api
-import Json_API
-from Json_API import *
+import API.Json_API as Json_API
+from API.Json_API import *
 
 
 Username_entry = None

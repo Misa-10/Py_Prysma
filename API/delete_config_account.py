@@ -1,7 +1,9 @@
 # Import of api
-import Json_API
-from Json_API import *
+import API.Json_API as Json_API
+from API.Json_API import *
 from pprint import pprint
+
+
 
 
 def Delete_config(radio_choose):
@@ -10,6 +12,7 @@ def Delete_config(radio_choose):
  del Json_API.Json_data[radio_choose]
  
  Write_json()
+ 
  
 
 Read_json()

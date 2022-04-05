@@ -4,8 +4,8 @@ from tkinter.ttk import *
 from tkinter import messagebox
 
 # Import of api
-import Json_API
-from Json_API import *
+import API.Json_API as Json_API
+from API.Json_API import *
 # import app
 # from app import Config_radio
 
@@ -157,15 +157,9 @@ def launch_modif_config_account(string,radio_choose):
             
             exists = e in config_data
             if exists == True:
-            
-                pprint("eeeeeeeeeeee:")
-                pprint(e)
-                pprint("json :")
-                pprint(Json_API.Json_data[e])
+                
                 del Json_API.Json_data[e]
                 Json_API.Json_data.update(config_data)
-                pprint("fusionnnnn:")
-                pprint(Json_API.Json_data)
                 Write_json()
                 modif_config_account.destroy()
                 break

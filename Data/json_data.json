@@ -1,0 +1,34 @@
+{
+  "a": {
+    "nameconfig": "a",
+    "numberaccount": "3",
+    "data": {
+      "username": ["a", "a", "a", "a", "a", "a", "a", "a"],
+      "passw": ["a", "a", "a", "a", "a", "a", "a", "a"]
+    }
+  },
+  "z": {
+    "nameconfig": "z",
+    "numberaccount": "4",
+    "data": {
+      "username": ["z", "z", "z", "z", "z", "z", "z", "z"],
+      "passw": ["z", "z", "z", "z", "z", "z", "z", "z"]
+    }
+  },
+  "p": {
+    "nameconfig": "p",
+    "numberaccount": "4",
+    "data": {
+      "username": ["e", "e", "e", "e", "e", "e", "e", "e"],
+      "passw": ["e", "e", "e", "e", "e", "e", "e", "e"]
+    }
+  },
+  "e": {
+    "nameconfig": "e",
+    "numberaccount": "4",
+    "data": {
+      "username": ["o", "x", "e", "e", "e", "e", "e", "p"],
+      "passw": ["o", "x", "e", "e", "e", "e", "e", "e"]
+    }
+  }
+}

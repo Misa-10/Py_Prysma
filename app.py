@@ -4,17 +4,18 @@ from tkinter.ttk import *
 
 
 # Import of api
-from App_config_account import *
-import Json_API
-from Json_API import *
-from Modif_config_account import *
-from delete_config_account import *
+from API.Json_API import * 
+from API.App_config_account import *
+from API.Modif_config_account import *
+from API.delete_config_account import *
+import API.Json_API 
 
 rowCheck = 0
 columnCheck = 0
 Json_data = {}
 Config_radio = None
 Number_radio =0
+
 
 app = Tk()
 
@@ -64,3 +65,4 @@ Read_json()
 Generate_Checkbox()
 
 app.mainloop()
+
