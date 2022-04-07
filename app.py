@@ -9,6 +9,7 @@ from API.App_config_account import *
 from API.Modif_config_account import *
 from API.delete_config_account import *
 import API.Json_API 
+from API.Settings_pixel import *
 
 rowCheck = 0
 columnCheck = 0
@@ -21,7 +22,7 @@ app = Tk()
 
 # style of page
 app.title("Main")
-app.geometry("800x500")
+app.geometry("1500x500")
 
 config_accoun_btn = Button(
     app, text='Créer une configuration comptes', command=lambda: [launch_app_config_account(app)]).grid(row=0, column=0, ipady=5, pady=10)
@@ -31,6 +32,9 @@ modif_config_account_btn = Button(
 
 delete_config_account_btn = Button(
     app, text='Supprimer la configuration', command=lambda: [Delete_config(Config_radio)]).grid(row=0, column=2, ipady=5, pady=10)
+
+Settings_connection_btn = Button(
+    app, text='Paramètres pixel de connection', command=lambda: [Launch_Settings_Pixel(app)]).grid(row=0, column=3, ipady=5, pady=10)
 
 
 # pprint(Json_data)
@@ -61,8 +65,9 @@ def Generate_Checkbox():
 
 
 Read_json()
+if Json_API.Json_data != None:
+   Generate_Checkbox()
 
-Generate_Checkbox()
-
+    
 app.mainloop()
 

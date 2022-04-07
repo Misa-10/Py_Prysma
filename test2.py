@@ -26,13 +26,16 @@ Pid_Window.append(pid)
 # print('hello world!'.translate(qwerty))
 
 def Connection_Compte():
-    time.sleep(8)
-    Read_json()
-    pyautogui.write(Json_API.Json_data["a"]["data"]["username"][0].translate(qwerty))
-    pyautogui.press("tab")
-    pyautogui.write(Json_API.Json_data["a"]["data"]["passw"][0].translate(qwerty))
-    pyautogui.press("enter")
-
+    while True:
+     GetColor = pyautogui.pixelMatchesColor(100, 200, (130, 135, 144))
+     if GetColor == True:
+      Read_json()
+      pyautogui.write(Json_API.Json_data["a"]["data"]["username"][0].translate(qwerty))
+      pyautogui.press("tab")
+      pyautogui.write(Json_API.Json_data["a"]["data"]["passw"][0].translate(qwerty))
+      pyautogui.press("enter")
+      break
+  
 def Choose_Server():
     time.sleep(8)
     while True:

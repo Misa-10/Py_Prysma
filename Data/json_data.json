@@ -1,34 +1,30 @@
 {
-  "a": {
-    "nameconfig": "a",
-    "numberaccount": "3",
+  "dfsfsd": {
+    "nameconfig": "dfsfsd",
+    "numberaccount": "5",
+    "numberserver": "3",
     "data": {
-      "username": ["a", "a", "a", "a", "a", "a", "a", "a"],
-      "passw": ["a", "a", "a", "a", "a", "a", "a", "a"]
-    }
-  },
-  "z": {
-    "nameconfig": "z",
-    "numberaccount": "4",
-    "data": {
-      "username": ["z", "z", "z", "z", "z", "z", "z", "z"],
-      "passw": ["z", "z", "z", "z", "z", "z", "z", "z"]
-    }
-  },
-  "p": {
-    "nameconfig": "p",
-    "numberaccount": "4",
-    "data": {
-      "username": ["e", "e", "e", "e", "e", "e", "e", "e"],
-      "passw": ["e", "e", "e", "e", "e", "e", "e", "e"]
-    }
-  },
-  "e": {
-    "nameconfig": "e",
-    "numberaccount": "4",
-    "data": {
-      "username": ["o", "x", "e", "e", "e", "e", "e", "p"],
-      "passw": ["o", "x", "e", "e", "e", "e", "e", "e"]
+      "username": [
+        "cvxvxcvx",
+        "sxccv",
+        "vfdfdfg",
+        "cdfd",
+        "vfdddgf",
+        "dfsfdsfds",
+        "dsfdfrz",
+        "dsdsdsf"
+      ],
+      "passw": [
+        "dssdfdf",
+        "ghhhjh",
+        "dffdsd",
+        "ffdfdf",
+        "dsffdsdfs",
+        "scddfdf",
+        "sdfd",
+        "dssdffs"
+      ],
+      "numberpersonnage": ["4", "3", "4", "4", "1", "3", "4", "3"]
     }
   }
 }

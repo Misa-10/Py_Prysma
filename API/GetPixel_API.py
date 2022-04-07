@@ -2,6 +2,7 @@ import pyautogui
 from pyautogui import *
 from pprint import pprint
 import os
+from API.Timer import *
 
 Data_Connection = {
     "BtnJouer" : [],
@@ -19,6 +20,7 @@ Data_Connection = {
 
 def GetBtnJouer():
  global Data_Connection
+ 
  BtnJouer_Pos = pyautogui.position()
  BtnJouer_Screen = pyautogui.screenshot('BtnJouer.png')
  BtnJouer_Color = BtnJouer_Screen.getpixel(BtnJouer_Pos)
@@ -27,7 +29,6 @@ def GetBtnJouer():
  Data_Connection["BtnJouer"].extend(BtnJouer_Pos)
 
  os.remove('BtnJouer.png')
- 
  pprint(Data_Connection)
 
 
@@ -175,14 +176,3 @@ def GetPers5():
  os.remove('Pers5.png')
  
  pprint(Data_Connection)
-GetBtnJouer()
-GetServ1()
-GetServ2()
-GetServ3()
-GetServ4()
-GetServ5()
-GetPers1()
-GetPers2()
-GetPers3()
-GetPers4()
-GetPers5()

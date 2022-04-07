@@ -1,14 +1,19 @@
 import json
 from pprint import pprint
+from json.decoder import JSONDecodeError
 
 
 Json_data = None
 
 
+
 def Read_json():
     global Json_data
     with open('Data/json_data.json', 'r') as readfile:
+     try:
         Json_data = json.load(readfile)
+     except JSONDecodeError:
+        pass
 
 
 def Write_json():
