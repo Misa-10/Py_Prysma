@@ -3,176 +3,186 @@ from pyautogui import *
 from pprint import pprint
 import os
 from API.Timer import *
+import API.Json_API as Json_API
+from API.Json_API import *
 
-Data_Connection = {
-    "BtnJouer" : [],
-    "Serv1" : [],
-    "Serv2" : [],
-    "Serv3" : [],
-    "Serv4" : [],
-    "Serv5" : [],
-    "Pers1" : [],
-    "Pers2" : [],
-    "Pers3" : [],
-    "Pers4" : [],
-    "Pers5" : [],
-}
+
+
 
 def GetBtnJouer():
- global Data_Connection
- 
- BtnJouer_Pos = pyautogui.position()
- BtnJouer_Screen = pyautogui.screenshot('BtnJouer.png')
- BtnJouer_Color = BtnJouer_Screen.getpixel(BtnJouer_Pos)
- 
- Data_Connection["BtnJouer"].extend(BtnJouer_Color)
- Data_Connection["BtnJouer"].extend(BtnJouer_Pos)
 
- os.remove('BtnJouer.png')
- pprint(Data_Connection)
+ BtnJouer_Pos = pyautogui.position()
+ BtnJouer_Color = pyautogui.pixel(BtnJouer_Pos[0],BtnJouer_Pos[1])
+
+ Dict = { "BtnJouer" : {"Pos" :[BtnJouer_Pos[0],BtnJouer_Pos[1]], "Color" : [BtnJouer_Color[0],BtnJouer_Color[1],BtnJouer_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
+
+   
 
 
 def GetServ1():
- global Data_Connection
+    
  Serv1_Pos = pyautogui.position()
- Serv1_Screen = pyautogui.screenshot('Serv1.png')
- Serv1_Color = Serv1_Screen.getpixel(Serv1_Pos)
- 
- Data_Connection["Serv1"].extend(Serv1_Color)
- Data_Connection["Serv1"].extend(Serv1_Pos)
+ Serv1_Color = pyautogui.pixel(Serv1_Pos[0],Serv1_Pos[1])
 
- os.remove('Serv1.png')
- 
- pprint(Data_Connection)
+ Dict = { "Serv1" : {"Pos" :[Serv1_Pos[0],Serv1_Pos[1]], "Color" : [Serv1_Color[0],Serv1_Color[1],Serv1_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetServ2():
- global Data_Connection
  Serv2_Pos = pyautogui.position()
- Serv2_Screen = pyautogui.screenshot('Serv2.png')
- Serv2_Color = Serv2_Screen.getpixel(Serv2_Pos)
- 
- Data_Connection["Serv2"].extend(Serv2_Color)
- Data_Connection["Serv2"].extend(Serv2_Pos)
+ Serv2_Color = pyautogui.pixel(Serv2_Pos[0],Serv2_Pos[1])
 
- os.remove('Serv2.png')
- 
- pprint(Data_Connection)
+ Dict = { "Serv2" : {"Pos" :[Serv2_Pos[0],Serv2_Pos[1]], "Color" : [Serv2_Color[0],Serv2_Color[1],Serv2_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetServ3():
- global Data_Connection
  Serv3_Pos = pyautogui.position()
- Serv3_Screen = pyautogui.screenshot('Serv3.png')
- Serv3_Color = Serv3_Screen.getpixel(Serv3_Pos)
- 
- Data_Connection["Serv3"].extend(Serv3_Color)
- Data_Connection["Serv3"].extend(Serv3_Pos)
+ Serv3_Color = pyautogui.pixel(Serv3_Pos[0],Serv3_Pos[1])
 
- os.remove('Serv3.png')
- 
- pprint(Data_Connection)
+ Dict = { "Serv3" : {"Pos" :[Serv3_Pos[0],Serv3_Pos[1]], "Color" : [Serv3_Color[0],Serv3_Color[1],Serv3_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 def GetServ4():
- global Data_Connection
  Serv4_Pos = pyautogui.position()
- Serv4_Screen = pyautogui.screenshot('Serv4.png')
- Serv4_Color = Serv4_Screen.getpixel(Serv4_Pos)
- 
- Data_Connection["Serv4"].extend(Serv4_Color)
- Data_Connection["Serv4"].extend(Serv4_Pos)
+ Serv4_Color = pyautogui.pixel(Serv4_Pos[0],Serv4_Pos[1])
 
- os.remove('Serv4.png')
- 
- pprint(Data_Connection)
+ Dict = { "Serv4" : {"Pos" :[Serv4_Pos[0],Serv4_Pos[1]], "Color" : [Serv4_Color[0],Serv4_Color[1],Serv4_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetServ5():
- global Data_Connection
  Serv5_Pos = pyautogui.position()
- Serv5_Screen = pyautogui.screenshot('Serv5.png')
- Serv5_Color = Serv5_Screen.getpixel(Serv5_Pos)
- 
- Data_Connection["Serv5"].extend(Serv5_Color)
- Data_Connection["Serv5"].extend(Serv5_Pos)
+ Serv5_Color = pyautogui.pixel(Serv5_Pos[0],Serv5_Pos[1])
 
- os.remove('Serv5.png')
- 
- pprint(Data_Connection)
+ Dict = { "Serv5" : {"Pos" :[Serv5_Pos[0],Serv5_Pos[1]], "Color" : [Serv5_Color[0],Serv5_Color[1],Serv5_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetPers1():
- global Data_Connection
  Pers1_Pos = pyautogui.position()
- Pers1_Screen = pyautogui.screenshot('Pers1.png')
- Pers1_Color = Pers1_Screen.getpixel(Pers1_Pos)
- 
- Data_Connection["Pers1"].extend(Pers1_Color)
- Data_Connection["Pers1"].extend(Pers1_Pos)
+ Pers1_Color = pyautogui.pixel(Pers1_Pos[0],Pers1_Pos[1])
 
- os.remove('Pers1.png')
- 
- pprint(Data_Connection)
+ Dict = { "Pers1" : {"Pos" :[Pers1_Pos[0],Pers1_Pos[1]], "Color" : [Pers1_Color[0],Pers1_Color[1],Pers1_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetPers2():
- global Data_Connection
  Pers2_Pos = pyautogui.position()
- Pers2_Screen = pyautogui.screenshot('Pers2.png')
- Pers2_Color = Pers2_Screen.getpixel(Pers2_Pos)
- 
- Data_Connection["Pers2"].extend(Pers2_Color)
- Data_Connection["Pers2"].extend(Pers2_Pos)
+ Pers2_Color = pyautogui.pixel(Pers2_Pos[0],Pers2_Pos[1])
 
- os.remove('Pers2.png')
- 
- pprint(Data_Connection)
+ Dict = { "Pers2" : {"Pos" :[Pers2_Pos[0],Pers2_Pos[1]], "Color" : [Pers2_Color[0],Pers2_Color[1],Pers2_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 def GetPers3():
- global Data_Connection
  Pers3_Pos = pyautogui.position()
- Pers3_Screen = pyautogui.screenshot('Pers3.png')
- Pers3_Color = Pers3_Screen.getpixel(Pers3_Pos)
- 
- Data_Connection["Pers3"].extend(Pers3_Color)
- Data_Connection["Pers3"].extend(Pers3_Pos)
+ Pers3_Color = pyautogui.pixel(Pers3_Pos[0],Pers3_Pos[1])
 
- os.remove('Pers3.png')
- 
- pprint(Data_Connection)
+ Dict = { "Pers3" : {"Pos" :[Pers3_Pos[0],Pers3_Pos[1]], "Color" : [Pers3_Color[0],Pers3_Color[1],Pers3_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 
 def GetPers4():
- global Data_Connection
  Pers4_Pos = pyautogui.position()
- Pers4_Screen = pyautogui.screenshot('Pers4.png')
- Pers4_Color = Pers4_Screen.getpixel(Pers4_Pos)
- 
- Data_Connection["Pers4"].extend(Pers4_Color)
- Data_Connection["Pers4"].extend(Pers4_Pos)
+ Pers4_Color = pyautogui.pixel(Pers4_Pos[0],Pers4_Pos[1])
 
- os.remove('Pers4.png')
- 
- pprint(Data_Connection)
+ Dict = { "Pers4" : {"Pos" :[Pers4_Pos[0],Pers4_Pos[1]], "Color" : [Pers4_Color[0],Pers4_Color[1],Pers4_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
 
 
 def GetPers5():
- global Data_Connection
  Pers5_Pos = pyautogui.position()
- Pers5_Screen = pyautogui.screenshot('Pers5.png')
- Pers5_Color = Pers5_Screen.getpixel(Pers5_Pos)
- 
- Data_Connection["Pers5"].extend(Pers5_Color)
- Data_Connection["Pers5"].extend(Pers5_Pos)
+ Pers5_Color = pyautogui.pixel(Pers5_Pos[0],Pers5_Pos[1])
 
- os.remove('Pers5.png')
+ Dict = { "Pers5" : {"Pos" :[Pers5_Pos[0],Pers5_Pos[1]], "Color" : [Pers5_Color[0],Pers5_Color[1],Pers5_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
  
- pprint(Data_Connection)
+def GetBtnPret():
+
+ BtnPret_Pos = pyautogui.position()
+ BtnPret_Color = pyautogui.pixel(BtnPret_Pos[0],BtnPret_Pos[1])
+
+ Dict = { "BtnPret" : {"Pos" :[BtnPret_Pos[0],BtnPret_Pos[1]], "Color" : [BtnPret_Color[0],BtnPret_Color[1],BtnPret_Color[2]]} }
+ Read_json()
+ if Json_API.Json_data2 == None:
+             Json_API.Json_data2 = Dict
+ else:
+  Json_API.Json_data2.update(Dict)
+  
+ Json_API.Write_json_Config_Pixel_Connection()
+

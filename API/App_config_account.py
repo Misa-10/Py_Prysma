@@ -18,6 +18,7 @@ numberpersonnage_Combobox = None
 config_data = None
 nameconfig_data = None
 nameconfig_entry = None
+numberaccount_data = "10000"
 
 
 account_Data_array = []
@@ -46,7 +47,8 @@ def launch_app_config_account(string):
         global numberserver_Combobox
         global numberpersonnage_Combobox
         x = x+1
-        # pprint(x)
+        pprint(x)
+        pprint(int(numberaccount_data))
         if x == 0:
             nameconfig_label = Label(
                 app_config_account, text='Nom de configuration', font=('calibre', 15, 'bold')).grid(row=0, column=0, ipady=5, pady=10)
@@ -73,9 +75,8 @@ def launch_app_config_account(string):
             sub_btn = Button(app_config_account, text='Suivant', command=lambda: [
                              Check_input_filled()]).grid(row=7, column=1, ipady=5, pady=10)
             
-            pprint(nameconfig_entry.get())
 
-        elif x == 8:
+        elif x == int(numberaccount_data):
             Account_label = Label(app_config_account, text='Compte '+str(x),
                                   font=('calibre', 15, 'bold')).grid(row=0, column=3, ipady=5, pady=10)
             Username_label = Label(app_config_account, text='Username',
@@ -143,6 +144,7 @@ def launch_app_config_account(string):
     def Get_Data_config():
         global config_data
         global nameconfig_data
+        global numberaccount_data
         
         
         pprint(nameconfig_entry)
@@ -183,7 +185,7 @@ def launch_app_config_account(string):
             Get_Data_config()
             Clear_page()
             Page_account()
-        elif x == 8:
+        elif x == int(numberaccount_data):
             Get_Data_account()
             Read_json()
             if Json_API.Json_data == None:

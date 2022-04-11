@@ -10,6 +10,8 @@ from API.Modif_config_account import *
 from API.delete_config_account import *
 import API.Json_API 
 from API.Settings_pixel import *
+import API.Connexion as Connexion
+from API.Connexion import *
 
 rowCheck = 0
 columnCheck = 0
@@ -36,8 +38,10 @@ delete_config_account_btn = Button(
 Settings_connection_btn = Button(
     app, text='Paramètres pixel de connection', command=lambda: [Launch_Settings_Pixel(app)]).grid(row=0, column=3, ipady=5, pady=10)
 
+StartDofus_btn = Button(
+    app, text='Lancer Dofus', command=lambda: [Get_TheRadioChoosers(),Connection_Window(Number_radio)]).grid(row=0, column=4, ipady=5, pady=10)
 
-# pprint(Json_data)
+
 
 def Generate_Checkbox():
     global rowCheck
@@ -57,6 +61,11 @@ def Generate_Checkbox():
         Radiobutton(app, text=x,
                     variable=Config_radio,
                     value=x).grid(row=rowCheck, column=columnCheck, ipady=5, pady=10)
+ 
+def Get_TheRadioChoosers():
+    global Config_radio
+    global Number_radio
+    Number_radio = Config_radio.get()
         
         
 
